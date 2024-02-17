@@ -32,7 +32,8 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
 	testImplementation("org.testcontainers:junit-jupiter")
-	testImplementation("org.testcontainers:mongodb")
+	testImplementation("org.testcontainers:testcontainers:1.16.2")
+	testImplementation("org.testcontainers:mongodb:1.16.2")
 }
 
 tasks.withType<KotlinCompile> {
