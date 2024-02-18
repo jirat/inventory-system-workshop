@@ -25,8 +25,8 @@ class ProductInventoryController(
     }
 
     @PostMapping("inventory")
-    fun addProduct(@RequestBody productDetail: ProductDetail) {
-
+    fun addProduct(@RequestBody productDetail: ProductDetail): String {
+        return service.addNewProduct(productDetail)
     }
 
     @PutMapping("inventory/{productId}")
