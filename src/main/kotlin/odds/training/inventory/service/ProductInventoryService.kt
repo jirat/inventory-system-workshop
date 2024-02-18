@@ -9,10 +9,11 @@ class ProductInventoryService(
     private val productInventoryRepository: ProductInventoryRepository
 ) {
     fun getAllProducts(): List<Product> =
-        productInventoryRepository.findAll().map {
-            Product(
-                it.id.toString(),
-                it.name,
-            )
-        }.toList()
+        productInventoryRepository.findAll()
+            .map {
+                Product(
+                    it.id,
+                    it.name,
+                )
+            }.toList()
 }
